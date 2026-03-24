@@ -25,8 +25,8 @@ It features **automatic pagination**, **random User-Agent rotation** to reduce b
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
-cd <your-project-folder>
+git clone <repo-url>
+cd <project-folder>
 ```
 
 ### 2. Install dependencies
@@ -100,3 +100,9 @@ Book_name,Price,Rating,Stock,Book_url
 * Best used on websites that **allow scraping**
 * Always scrape responsibly; avoid sending too many requests in a short time
 * Modular code allows easy adaptation to different websites
+  
+---  
+## Author
+
+Your Name
+GitHub: [akashshinde-dev](https://github.com/akashshinde-dev)
