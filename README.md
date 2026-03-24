@@ -1,108 +1,89 @@
+```markdown
+# 🛒 Product Scraping Tool
 
-# Advanced Multi-Page Web Scraper in Python
-
-## Description
-
-This project demonstrates a **robust Python web scraper** capable of collecting structured data from multiple pages of a website and saving it safely into CSV files.
-
-It features **automatic pagination**, **random User-Agent rotation** to reduce blocking, **retry logic**, and **safe CSV writing**. The project highlights skills in **Python programming**, **web scraping**, and **data handling**.
+A Python-based web scraping tool that extracts product information from websites and stores it in a structured format for analysis and reuse.
 
 ---
 
-## Key Features
-
-* Scrapes data from multiple pages automatically
-* Random User-Agent support to reduce request blocking
-* Retry mechanism for failed requests
-* Saves data safely and reliably into CSV files
-* Handles missing or inconsistent data gracefully
-* Modular and reusable code design
+## 🚀 Features
+- Extracts product details such as name, price, and other information  
+- Fast and efficient scraping using `requests` and `BeautifulSoup`  
+- Stores data in CSV format  
+- Includes basic error handling for stable execution  
+- Simple and easy-to-use script  
 
 ---
 
-## Installation
+## 🛠️ Tech Stack
+- **Language:** Python  
+- **Libraries:** requests, BeautifulSoup (bs4)  
+- **Data Storage:** CSV  
 
-### 1. Clone the repository
+---
 
-```bash
-git clone <repo-url>
-cd <project-folder>
+## 📂 Project Structure
 ```
 
-### 2. Install dependencies
+Product-Scraping-Tool/
+│── scraper.py
+│── output.csv
+│── README.md
 
-```bash
-pip install requests beautifulsoup4 fake-useragent
 ```
 
 ---
 
-## Usage
+## ▶️ How to Run
 
-### Import modules
-
-```python
-from scraper import MultiPageScraper
-from save_to_csv import csv_dict
+### 1. Clone the Repository
 ```
 
-### Create scraper and run
+git clone [https://github.com/akashshinde-dev/Product-Scraping-Tool](https://github.com/akashshinde-dev/Product-Scraping-Tool)
 
-```python
-scraper = MultiPageScraper()
-
-data = scraper.scrape_multi_pages(
-    "http://books.toscrape.com/",  # Replace with your target URL
-    item_selector,
-    fields,
-    next_page_selector,
-    stop_page=2
-)
-
-csv_dict.save(data, file_name="output.csv")
 ```
 
-> **Note:** Define `item_selector`, `fields`, and `next_page_selector` according to the structure of the target website.
+### 2. Navigate to Project Folder
+```
 
----
+cd Product-Scraping-Tool
 
-## How It Works
+```
 
-1. **Define selectors**: Specify which HTML elements to extract.
-2. **Pagination support**: Automatically follows “next page” links until the last page or a defined page limit.
-3. **Data collection**: Extracts all fields from each page.
-4. **CSV export**: Saves the data safely into CSV files, avoiding overwrites unless specified.
+### 3. Install Required Libraries
+```
 
----
+pip install requests beautifulsoup4
 
-## Skills Demonstrated
+```
 
-* Python 3.x programming and object-oriented design
-* Web scraping with **Requests** and **BeautifulSoup**
-* Randomized User-Agent handling to mimic human browsing
-* Error handling and retry logic for robust scripts
-* Data validation and CSV export
+### 4. Run the Script
+```
 
----
+python scraper.py
 
-## Example Output
-
-```csv
-Book_name,Price,Rating,Stock,Book_url
-"A Light in the Attic","£51.77","Three","In stock","http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
-"Tipping the Velvet","£53.74","One","In stock","http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html"
 ```
 
 ---
 
-## Notes
+## 📊 Output
+- Extracted product data is saved in `output.csv`  
+- Data can be used for analysis, reporting, or further processing  
 
-* Best used on websites that **allow scraping**
-* Always scrape responsibly; avoid sending too many requests in a short time
-* Modular code allows easy adaptation to different websites
-  
----  
-## Author
+---
 
-Your Name
-GitHub: [akashshinde-dev](https://github.com/akashshinde-dev)
+## ⚠️ Disclaimer
+This project is for educational purposes only. Please ensure you follow the website’s terms of service before scraping any data.
+
+---
+
+## 🔧 Future Improvements
+- Add support for dynamic websites using Selenium  
+- Export data to JSON format  
+- Add logging for better debugging  
+- Build a GUI version  
+
+---
+
+## 👨‍💻 Author
+**Akash Shinde**  
+- GitHub: https://github.com/akashshinde-dev  
